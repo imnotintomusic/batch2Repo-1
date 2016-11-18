@@ -1,0 +1,62 @@
+
+/*-----------GLOBAL-------------*/
+
+body{background:url(http://graphicdesignjunction.com/wp-content/uploads/2014/05/0011+background+pattern+designs.jpg) #f25e5a;margin:0;padding:0px 20px 20px 20px;color:#555;text-align:center;font-family:Segoe UI;font-size:13px;}
+#header{border:solid 1px #555;}
+header,footer,aside,article,p,ul{margin:0;padding:0;}
+ul{list-style: none;}
+a{ color:#555; text-decoration: none;}
+a:hover{color: #f05c58;}
+*{transition:ease all .3s;-webkit-transition:ease all .3s;-moz-transition:ease all .3s;-o-transition:ease all .3s;-ms-transition:ease all .3s}
+
+/*-----------CUSTOM-------------*/
+
+.bg1{background: rgba(249, 215, 215, 0.76);}
+.bg2{background:#ffffff;}
+.bg3{background: #f7bab4;}
+.padding1{padding:10px;box-sizing: border-box;}
+.noPaddingTop{padding-top:0;}
+.border{border:solid 1px #555;}
+.marginbot {margin-bottom:10px;}
+.margintop{margin-top:10px;}
+.clear:after{content:'';display:block;height:0;visibility:hidden;}
+.clr{clear:both;height:0;visibility:hidden;}
+
+
+/*-----------HEADER-------------*/
+
+#header{}
+
+
+/*-----------NAVIGATION-------------*/
+
+#header nav {text-align:center;}
+#header nav ul{}
+#header nav li{display:inline-block; }
+#header nav a{margin: 0 10px;  }
+#header nav a:hover{}
+
+
+/*-----------FOOTER-------------*/
+
+#footer{}
+
+/*-----------SIDEBAR-------------*/
+
+#sidebar{float:left;width: 38.8%;}
+#sbNav{    display:table;width:100%;    min-height: 471px;}
+#sbNav ul{display:table-cell;vertical-align: middle;}
+#sbNav a:hover{
+    background: url(http://www.solarisdentaldesign.com/1330980265_Right-arrow.png) no-repeat 250% center;
+    padding: 0 30px 0 0;
+    background-size: 71px;
+}
+
+
+/*-----------CONTENT-------------*/
+
+#main{float:right;width:60%;min-height:300px;}
+#rightPanelAside{float:right;width:30%;    padding: 40px 0;}
+#paragraph3{float:left;width:67.5%;    padding: 40px 0;}
+
+
