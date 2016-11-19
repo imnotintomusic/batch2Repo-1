@@ -67,48 +67,307 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 10, ../sass/screen.scss */
+/*-----------GLOBAL-------------*/
+/* line 27, ../sass/screen.scss */
 body {
-  width: 10px;
+  color: #2da8c9;
+  font-family: trebuchet ms;
+  font-size: 13px;
 }
 
-/* line 20, ../sass/screen.scss */
-.test {
-  background: #ddd;
-  color: #fff;
-  border: border solid green;
+/* line 31, ../sass/screen.scss */
+a {
+  color: #555;
+  text-decoration: none;
+}
+
+/* line 32, ../sass/screen.scss */
+a:hover {
+  color: #f05c58;
 }
 
 /* line 33, ../sass/screen.scss */
-.test2, .test3 {
-  border: solid green 1px;
-  display: block;
-  margin: 0;
-  padding: 0;
-  height: 100px;
-  width: 100px;
+input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  height: 60px;
+  padding: 0 20px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* line 42, ../sass/screen.scss */
+h1 {
+  font-size: 67px;
+  font-family: trebuchet ms;
+  font-weight: 700;
 }
 
 /* line 43, ../sass/screen.scss */
-.test4 {
-  width: 320px;
+h2 {
+  font-size: 46px;
+  font-weight: 500;
 }
 
-/* line 49, ../sass/screen.scss */
-nav {
-  width: 960px;
-  margin: margin 0 auto;
+/* line 44, ../sass/screen.scss */
+h3 {
+  font-size: 36px;
+  font-weight: 500;
 }
-/* line 52, ../sass/screen.scss */
-nav ul {
-  margin: 0;
-  padding: 0;
-}
-/* line 54, ../sass/screen.scss */
-nav ul li {
-  list-style: none;
-}
+
+/**{transition:ease all .3s;-webkit-transition:ease all .3s;-moz-transition:ease all .3s;-o-transition:ease all .3s;-ms-transition:ease all .3s}*/
+/*-----------CUSTOM-------------*/
 /* line 56, ../sass/screen.scss */
-nav ul li a {
-  text-decoration: none;
+.clr:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* line 57, ../sass/screen.scss */
+.clr2 {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* line 58, ../sass/screen.scss */
+.left {
+  float: left;
+}
+
+/* line 59, ../sass/screen.scss */
+.right {
+  float: right;
+}
+
+/**------**/
+/* line 67, ../sass/screen.scss */
+#header {
+  background: #2da8c9;
+  color: #fff;
+}
+/* line 69, ../sass/screen.scss */
+#header #topBar {
+  background: #525659;
+  height: 56px;
+}
+/* line 70, ../sass/screen.scss */
+#header .wrap {
+  padding: 70px 0;
+  margin: 0 auto;
+  width: 1300px;
+}
+/* line 71, ../sass/screen.scss */
+#header #logo {
+  width: 200px;
+}
+/* line 74, ../sass/screen.scss */
+#header #logo a img {
+  max-width: 100%;
+}
+/* line 79, ../sass/screen.scss */
+#header #navigation {
+  font-family: Gentium;
+  font-size: 39px;
+  margin: 20px 0 0 7%;
+}
+/* line 82, ../sass/screen.scss */
+#header #navigation ul li {
+  display: inline-block;
+}
+/* line 84, ../sass/screen.scss */
+#header #navigation ul li a {
+  color: #fff;
+  margin: 0 11px 0 3px;
+}
+/* line 91, ../sass/screen.scss */
+#header #hRight {
+  width: 270px;
+  margin: 25px 0 0 0;
+}
+/* line 93, ../sass/screen.scss */
+#header #hRight input[type="text"] {
+  border: solid 1px #fff;
+  height: 40px;
+  background: url(../images/NXTLVL_WEBDEV_ICON_MAGNIFYING.png) no-repeat 98% center;
+  background-size: 24px;
+  padding: 0 35px 0 20px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 18px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* line 115, ../sass/screen.scss */
+#content .conTxt {
+  text-align: center;
+  font-size: 43px;
+  padding: 35px 0 35px 0;
+}
+/* line 120, ../sass/screen.scss */
+#content .formWrap {
+  border-top: solid 4px #eaeaea;
+  margin: 0 auto;
+  width: 960px;
+}
+/* line 123, ../sass/screen.scss */
+#content .formWrap .formButtons {
+  text-align: center;
+  padding: 60px 0;
+}
+/* line 126, ../sass/screen.scss */
+#content .formWrap .formButtons ul {
+  position: relative;
+}
+/* line 128, ../sass/screen.scss */
+#content .formWrap .formButtons ul li {
+  display: inline-block;
+  margin: 0 0 0 34%;
+  position: relative;
+  z-index: 1;
+}
+/* line 133, ../sass/screen.scss */
+#content .formWrap .formButtons ul li:first-child {
+  margin-left: 0;
+}
+/* line 136, ../sass/screen.scss */
+#content .formWrap .formButtons ul li a {
+  border: solid #bfbfbf 12px;
+  background: #fff;
+  color: #2da8c9;
+  padding: 14px 24px;
+  display: block;
+  font-size: 45px;
+  -webkit-border-radius: 2000px;
+  -moz-border-radius: 2000px;
+  -ms-border-radius: 2000px;
+  border-radius: 2000px;
+}
+/* line 149, ../sass/screen.scss */
+#content .formWrap .formButtons ul:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 42px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 10px;
+  width: 94%;
+  background: #bfbfbf;
+}
+/* line 164, ../sass/screen.scss */
+#content .formWrap .formDiv {
+  padding: 0 0 120px 0;
+}
+/* line 166, ../sass/screen.scss */
+#content .formWrap .formDiv .formIn {
+  background: #ebebeb;
+  padding: 20px 35px 45px 35px;
+}
+/* line 170, ../sass/screen.scss */
+#content .formWrap .formDiv .formIn .formInputDiv {
+  padding: 15px 40px 0 40px;
+}
+/* line 172, ../sass/screen.scss */
+#content .formWrap .formDiv .formIn .formInputDiv .inputDiv {
+  margin: 0 0 10px 0;
+}
+/* line 174, ../sass/screen.scss */
+#content .formWrap .formDiv .formIn .formInputDiv .inputDiv label {
+  font-size: 28px;
+  padding: 0 0 0 10px;
+}
+/* line 178, ../sass/screen.scss */
+#content .formWrap .formDiv .formIn .formInputDiv .inputDiv input[type="text"] {
+  margin: 5px 0 0px 0;
+}
+/* line 181, ../sass/screen.scss */
+#content .formWrap .formDiv .formIn .formInputDiv .inputDivHalf {
+  width: 48.5%;
+}
+/* line 184, ../sass/screen.scss */
+#content .formWrap .formDiv .formSubmit {
+  margin: 30px 0 0 auto;
+  display: block;
+  background: #2da8c9;
+  border: none;
+  color: #fff;
+  font-size: 38px;
+  padding: 15px 20px;
+  min-width: 260px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/**------**/
+/* line 204, ../sass/screen.scss */
+#footer {
+  background: #bfbfbf;
+  color: #fff;
+  text-align: center;
+  font-size: 26px;
+  padding: 40px 0 30px 0;
+}
+/* line 206, ../sass/screen.scss */
+#footer .wrap2 {
+  margin: 0 auto;
+  width: 960px;
+}
+/* line 208, ../sass/screen.scss */
+#footer .wrap2 .ftCirc {
+  margin: 0 0 10px 0;
+}
+/* line 210, ../sass/screen.scss */
+#footer .wrap2 .ftCirc .circle {
+  -webkit-border-radius: 1000px;
+  -moz-border-radius: 1000px;
+  -ms-border-radius: 1000px;
+  border-radius: 1000px;
+  background: #fff;
+  height: 70px;
+  width: 70px;
+  display: inline-block;
+  margin: 0 18px;
+}
+/* line 217, ../sass/screen.scss */
+#footer .wrap2 nav ul li {
+  display: inline-block;
+}
+/* line 219, ../sass/screen.scss */
+#footer .wrap2 nav ul li a {
+  color: #fff;
+  margin: 0 11px 0 7px;
+}
+/* line 223, ../sass/screen.scss */
+#footer .wrap2 #copyRight {
+  font-size: 21px;
+  margin: 10px 0 0 0;
+}
+
+/*-------------------------------*/
+@media only screen and (max-width: 1300px) {
+  /* line 230, ../sass/screen.scss */
+  .wrap, #header .wrap {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  /* line 231, ../sass/screen.scss */
+  #header #hRight {
+    width: 21%;
+  }
 }
