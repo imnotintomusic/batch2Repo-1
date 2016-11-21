@@ -68,51 +68,75 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /*-----------GLOBAL-------------*/
-/* line 27, ../sass/screen.scss */
+/* line 49, ../sass/screen.scss */
+#header #navigation ul li a {
+  transition: ease all 0.3s;
+  -webkit-transition: ease all 0.3s;
+  -moz-transition: ease all 0.3s;
+  -o-transition: ease all 0.3s;
+  -ms-transition: ease all 0.3s;
+}
+
+/* line 50, ../sass/screen.scss */
+a {
+  transition: ease all 0.3s;
+  -webkit-transition: ease all 0.3s;
+  -moz-transition: ease all 0.3s;
+  -o-transition: ease all 0.3s;
+  -ms-transition: ease all 0.3s;
+}
+
+/* line 53, ../sass/screen.scss */
 body {
   color: #2da8c9;
   font-family: trebuchet ms;
   font-size: 13px;
 }
 
-/* line 31, ../sass/screen.scss */
+/* line 57, ../sass/screen.scss */
 a {
   color: #555;
   text-decoration: none;
 }
 
-/* line 32, ../sass/screen.scss */
+/* line 58, ../sass/screen.scss */
 a:hover {
   color: #f05c58;
 }
 
-/* line 33, ../sass/screen.scss */
+/* line 59, ../sass/screen.scss */
 input[type="text"] {
   width: 100%;
   box-sizing: border-box;
   border: none;
   height: 60px;
   padding: 0 20px;
+  font-size: 22px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   border-radius: 10px;
 }
 
-/* line 42, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
+input:focus {
+  outline-style: none;
+}
+
+/* line 71, ../sass/screen.scss */
 h1 {
   font-size: 67px;
   font-family: trebuchet ms;
   font-weight: 700;
 }
 
-/* line 43, ../sass/screen.scss */
+/* line 72, ../sass/screen.scss */
 h2 {
   font-size: 46px;
   font-weight: 500;
 }
 
-/* line 44, ../sass/screen.scss */
+/* line 73, ../sass/screen.scss */
 h3 {
   font-size: 36px;
   font-weight: 500;
@@ -120,7 +144,7 @@ h3 {
 
 /**{transition:ease all .3s;-webkit-transition:ease all .3s;-moz-transition:ease all .3s;-o-transition:ease all .3s;-ms-transition:ease all .3s}*/
 /*-----------CUSTOM-------------*/
-/* line 56, ../sass/screen.scss */
+/* line 85, ../sass/screen.scss */
 .clr:after {
   content: '';
   display: block;
@@ -129,7 +153,7 @@ h3 {
   visibility: hidden;
 }
 
-/* line 57, ../sass/screen.scss */
+/* line 86, ../sass/screen.scss */
 .clr2 {
   content: '';
   display: block;
@@ -138,62 +162,66 @@ h3 {
   visibility: hidden;
 }
 
-/* line 58, ../sass/screen.scss */
+/* line 87, ../sass/screen.scss */
 .left {
   float: left;
 }
 
-/* line 59, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 .right {
   float: right;
 }
 
 /**------**/
-/* line 67, ../sass/screen.scss */
+/* line 96, ../sass/screen.scss */
 #header {
   background: #2da8c9;
   color: #fff;
 }
-/* line 69, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 #header #topBar {
   background: #525659;
   height: 56px;
 }
-/* line 70, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
 #header .wrap {
   padding: 70px 0;
   margin: 0 auto;
   width: 1300px;
 }
-/* line 71, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 #header #logo {
   width: 200px;
 }
-/* line 74, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 #header #logo a img {
   max-width: 100%;
 }
-/* line 79, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 #header #navigation {
-  font-family: Gentium;
+  font-family: "Cormorant Garamond", Garamond, serif;
   font-size: 39px;
   margin: 20px 0 0 7%;
 }
-/* line 82, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 #header #navigation ul li {
   display: inline-block;
 }
-/* line 84, ../sass/screen.scss */
+/* line 116, ../sass/screen.scss */
 #header #navigation ul li a {
   color: #fff;
   margin: 0 11px 0 3px;
 }
-/* line 91, ../sass/screen.scss */
+/* line 118, ../sass/screen.scss */
+#header #navigation ul li a:hover {
+  color: #525659;
+}
+/* line 124, ../sass/screen.scss */
 #header #hRight {
   width: 270px;
   margin: 25px 0 0 0;
 }
-/* line 93, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 #header #hRight input[type="text"] {
   border: solid 1px #fff;
   height: 40px;
@@ -209,39 +237,39 @@ h3 {
   border-radius: 10px;
 }
 
-/* line 115, ../sass/screen.scss */
+/* line 148, ../sass/screen.scss */
 #content .conTxt {
   text-align: center;
   font-size: 43px;
   padding: 35px 0 35px 0;
 }
-/* line 120, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
 #content .formWrap {
   border-top: solid 4px #eaeaea;
   margin: 0 auto;
   width: 960px;
 }
-/* line 123, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 #content .formWrap .formButtons {
   text-align: center;
   padding: 60px 0;
 }
-/* line 126, ../sass/screen.scss */
+/* line 159, ../sass/screen.scss */
 #content .formWrap .formButtons ul {
   position: relative;
 }
-/* line 128, ../sass/screen.scss */
+/* line 161, ../sass/screen.scss */
 #content .formWrap .formButtons ul li {
   display: inline-block;
   margin: 0 0 0 34%;
   position: relative;
   z-index: 1;
 }
-/* line 133, ../sass/screen.scss */
+/* line 166, ../sass/screen.scss */
 #content .formWrap .formButtons ul li:first-child {
   margin-left: 0;
 }
-/* line 136, ../sass/screen.scss */
+/* line 169, ../sass/screen.scss */
 #content .formWrap .formButtons ul li a {
   border: solid #bfbfbf 12px;
   background: #fff;
@@ -254,7 +282,12 @@ h3 {
   -ms-border-radius: 2000px;
   border-radius: 2000px;
 }
-/* line 149, ../sass/screen.scss */
+/* line 177, ../sass/screen.scss */
+#content .formWrap .formButtons ul li a:hover {
+  background: #2da8c9;
+  color: #fff;
+}
+/* line 183, ../sass/screen.scss */
 #content .formWrap .formButtons ul:after {
   content: '';
   display: block;
@@ -267,37 +300,37 @@ h3 {
   width: 94%;
   background: #bfbfbf;
 }
-/* line 164, ../sass/screen.scss */
+/* line 198, ../sass/screen.scss */
 #content .formWrap .formDiv {
   padding: 0 0 120px 0;
 }
-/* line 166, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 #content .formWrap .formDiv .formIn {
   background: #ebebeb;
   padding: 20px 35px 45px 35px;
 }
-/* line 170, ../sass/screen.scss */
+/* line 204, ../sass/screen.scss */
 #content .formWrap .formDiv .formIn .formInputDiv {
   padding: 15px 40px 0 40px;
 }
-/* line 172, ../sass/screen.scss */
+/* line 206, ../sass/screen.scss */
 #content .formWrap .formDiv .formIn .formInputDiv .inputDiv {
   margin: 0 0 10px 0;
 }
-/* line 174, ../sass/screen.scss */
+/* line 208, ../sass/screen.scss */
 #content .formWrap .formDiv .formIn .formInputDiv .inputDiv label {
   font-size: 28px;
   padding: 0 0 0 10px;
 }
-/* line 178, ../sass/screen.scss */
+/* line 212, ../sass/screen.scss */
 #content .formWrap .formDiv .formIn .formInputDiv .inputDiv input[type="text"] {
   margin: 5px 0 0px 0;
 }
-/* line 181, ../sass/screen.scss */
+/* line 215, ../sass/screen.scss */
 #content .formWrap .formDiv .formIn .formInputDiv .inputDivHalf {
   width: 48.5%;
 }
-/* line 184, ../sass/screen.scss */
+/* line 218, ../sass/screen.scss */
 #content .formWrap .formDiv .formSubmit {
   margin: 30px 0 0 auto;
   display: block;
@@ -307,6 +340,7 @@ h3 {
   font-size: 38px;
   padding: 15px 20px;
   min-width: 260px;
+  cursor: pointer;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
@@ -314,7 +348,7 @@ h3 {
 }
 
 /**------**/
-/* line 204, ../sass/screen.scss */
+/* line 239, ../sass/screen.scss */
 #footer {
   background: #bfbfbf;
   color: #fff;
@@ -322,16 +356,16 @@ h3 {
   font-size: 26px;
   padding: 40px 0 30px 0;
 }
-/* line 206, ../sass/screen.scss */
+/* line 241, ../sass/screen.scss */
 #footer .wrap2 {
   margin: 0 auto;
   width: 960px;
 }
-/* line 208, ../sass/screen.scss */
+/* line 243, ../sass/screen.scss */
 #footer .wrap2 .ftCirc {
   margin: 0 0 10px 0;
 }
-/* line 210, ../sass/screen.scss */
+/* line 245, ../sass/screen.scss */
 #footer .wrap2 .ftCirc .circle {
   -webkit-border-radius: 1000px;
   -moz-border-radius: 1000px;
@@ -343,31 +377,304 @@ h3 {
   display: inline-block;
   margin: 0 18px;
 }
-/* line 217, ../sass/screen.scss */
+/* line 252, ../sass/screen.scss */
 #footer .wrap2 nav ul li {
   display: inline-block;
 }
-/* line 219, ../sass/screen.scss */
+/* line 254, ../sass/screen.scss */
 #footer .wrap2 nav ul li a {
   color: #fff;
   margin: 0 11px 0 7px;
 }
-/* line 223, ../sass/screen.scss */
+/* line 256, ../sass/screen.scss */
+#footer .wrap2 nav ul li a:hover {
+  color: #525659;
+}
+/* line 262, ../sass/screen.scss */
 #footer .wrap2 #copyRight {
   font-size: 21px;
   margin: 10px 0 0 0;
 }
 
+/*#mobNav{display:none;}*/
 /*-------------------------------*/
 @media only screen and (max-width: 1300px) {
-  /* line 230, ../sass/screen.scss */
+  /* line 271, ../sass/screen.scss */
   .wrap, #header .wrap {
     width: 95%;
     margin: 0 auto;
   }
 
-  /* line 231, ../sass/screen.scss */
+  /* line 272, ../sass/screen.scss */
+  #content .formWrap {
+    width: 100%;
+  }
+
+  /* line 273, ../sass/screen.scss */
   #header #hRight {
     width: 21%;
   }
+
+  /* line 274, ../sass/screen.scss */
+  #header #navigation {
+    margin: 20px 0 0 2%;
+  }
+
+  /* line 275, ../sass/screen.scss */
+  #header #navigation ul li a {
+    font-size: 29px;
+  }
+
+  /* line 276, ../sass/screen.scss */
+  #header #logo {
+    width: 160px;
+  }
+
+  /* line 277, ../sass/screen.scss */
+  #content .formWrap .formButtons ul:after {
+    width: 80%;
+  }
+
+  /* line 278, ../sass/screen.scss */
+  #content .formWrap .formButtons ul li {
+    margin: 0 0 0 31%;
+  }
+}
+@media only screen and (max-width: 979px) {
+  /* line 283, ../sass/screen.scss */
+  #header {
+    position: relative;
+  }
+
+  /* line 284, ../sass/screen.scss */
+  #header #navigation {
+    float: right;
+    margin: 50px 0 0 2%;
+  }
+
+  /* line 285, ../sass/screen.scss */
+  #header #hRight {
+    width: 21%;
+    position: absolute;
+    right: 20px;
+    top: 50px;
+  }
+
+  /* line 286, ../sass/screen.scss */
+  #header .wrap {
+    padding: 20px 0;
+  }
+
+  /* line 287, ../sass/screen.scss */
+  #footer .wrap2 {
+    width: 100%;
+  }
+
+  /* line 288, ../sass/screen.scss */
+  #footer .wrap2 nav ul li {
+    margin: 0 0 8px 0;
+  }
+
+  /* line 289, ../sass/screen.scss */
+  #footer .wrap2 .ftCirc .circle {
+    height: 50px;
+    width: 50px;
+    margin: 0 2%;
+  }
+
+  /* line 290, ../sass/screen.scss */
+  #content .formWrap .formButtons ul:after {
+    width: 68%;
+  }
+
+  /* line 291, ../sass/screen.scss */
+  #content .formWrap .formButtons ul li {
+    margin: 0 0 0 20%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 296, ../sass/screen.scss */
+  #header #logo {
+    text-align: center;
+    width: 210px;
+    display: block;
+    clear: both;
+    float: none;
+    margin: 0 auto;
+  }
+
+  /* line 297, ../sass/screen.scss */
+  #header #hRight {
+    width: 21%;
+    position: absolute;
+    right: 20px;
+    top: 7px;
+    margin: 0;
+  }
+
+  /* line 298, ../sass/screen.scss */
+  #header #navigation {
+    margin: 20px 0 0 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* line 299, ../sass/screen.scss */
+  #header #hRight {
+    width: 200px;
+  }
+
+  /* line 300, ../sass/screen.scss */
+  #header #navigation ul li a {
+    font-size: 25px;
+    margin: 0 6px 0 0;
+  }
+
+  /* line 301, ../sass/screen.scss */
+  #content .formWrap .formDiv .formIn .formInputDiv .inputDivHalf {
+    width: 100%;
+  }
+
+  /* line 302, ../sass/screen.scss */
+  #content .formWrap .formDiv .formIn .formInputDiv {
+    padding: 15px 0px 0 0px;
+  }
+
+  /* line 303, ../sass/screen.scss */
+  #content .formWrap .formDiv .formIn .formInputDiv .inputDiv input[type="text"] {
+    height: 40px;
+  }
+
+  /* line 304, ../sass/screen.scss */
+  .formTitle {
+    text-align: center;
+  }
+
+  /* line 305, ../sass/screen.scss */
+  #content .formWrap .formDiv .formSubmit {
+    margin: 30px auto 0 auto;
+  }
+
+  /* line 306, ../sass/screen.scss */
+  #content .formWrap .formButtons ul li {
+    margin: 0 0 0 15%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* line 310, ../sass/screen.scss */
+  #header .wrap {
+    padding: 20px 0 5px 0;
+  }
+
+  /* line 311, ../sass/screen.scss */
+  #header #hRight {
+    width: 200px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  /* line 312, ../sass/screen.scss */
+  #navigation span {
+    display: none;
+  }
+
+  /* line 313, ../sass/screen.scss */
+  #header #navigation ul li {
+    display: block;
+    margin: 0;
+  }
+
+  /* line 314, ../sass/screen.scss */
+  #header #navigation ul li a {
+    display: block;
+    margin: 0;
+    border-top: solid 1px #fff;
+    padding: 8px 0;
+  }
+
+  /* line 315, ../sass/screen.scss */
+  #header #navigation ul li a:hover {
+    background: #288da9;
+    color: #fff;
+  }
+
+  /* line 316, ../sass/screen.scss */
+  #content .formWrap .formButtons ul li a {
+    border: solid #bfbfbf 6px;
+    padding: 6px 11px;
+    font-size: 24px;
+  }
+
+  /* line 317, ../sass/screen.scss */
+  #content .formWrap .formButtons ul:after {
+    top: 20px;
+    width: 63%;
+    height: 7px;
+  }
+
+  /* line 318, ../sass/screen.scss */
+  #content .formWrap .formDiv .formIn {
+    padding: 20px 25px 45px 25px;
+  }
+
+  /* line 319, ../sass/screen.scss */
+  #content .formWrap .formDiv .formIn .formInputDiv .inputDiv label {
+    font-size: 6vw;
+  }
+
+  /* line 320, ../sass/screen.scss */
+  .formTitle {
+    font-size: 8vw;
+  }
+
+  /* line 321, ../sass/screen.scss */
+  #footer .wrap2 .ftCirc .circle {
+    height: 40px;
+    width: 40px;
+    margin: 0px;
+  }
+
+  /* line 323, ../sass/screen.scss */
+  #footer .wrap2 nav ul {
+    padding: 0 0 10px 0;
+  }
+
+  /* line 324, ../sass/screen.scss */
+  #footer .wrap2 nav ul li {
+    display: block;
+  }
+
+  /* line 325, ../sass/screen.scss */
+  #footer .wrap2 nav ul li a {
+    font-size: 19px;
+  }
+
+  /* line 326, ../sass/screen.scss */
+  #ftNav span {
+    display: none;
+  }
+
+  /* line 327, ../sass/screen.scss */
+  h1 {
+    font-size: 14vw;
+    margin: 0 0 20px 0;
+  }
+
+  /* line 328, ../sass/screen.scss */
+  p {
+    font-size: 8vw;
+  }
+
+  /* line 329, ../sass/screen.scss */
+  #copyRight p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  /*#mobNav{    background: #525659; font-size: 25px; padding: 8px 0;position:relative;}
+  .mobIcon{left:10px;    top: 0px;position:absolute;}
+  .mobIcon div{content:'';display:block;position:absolute;top:9px;width:30px;height:4px;background:#fff;}
+  .mobIcon:before{content:'';display:block;position:absolute;top:19px;width:30px;height:4px;background:#fff;}
+  .mobIcon:after{content:'';display:block;position:absolute;top:29px;width:30px;height:4px;background:#fff;}*/
 }

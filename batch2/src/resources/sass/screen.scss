@@ -8,6 +8,15 @@
 
 $font1:Segoe UI;
 $font2:trebuchet ms;
+$font3:'Cormorant Garamond',Garamond, serif;
+
+$color1:#2da8c9;
+$color2:#525659;
+$color3:#fff;
+$color4:#6b6b6b;
+
+$bg1:#2da8c9;
+$bg2:#525659;
 
 
 @mixin round($radius){
@@ -17,14 +26,31 @@ $font2:trebuchet ms;
   border-radius: $radius;
 }
 
+@mixin roundSize($size){
+  height:$size;
+  width:$size;
+}
+
 @mixin wrap($width){
   margin:0 auto;
   width:$width;
 }
 
-/*-----------GLOBAL-------------*/
+@mixin ease($sec){
+  transition:ease all $sec;
+  -webkit-transition:ease all $sec;
+  -moz-transition:ease all $sec;
+  -o-transition:ease all $sec;
+  -ms-transition:ease all $sec;
+}
 
-body{;color:#2da8c9;font-family:$font2;font-size:13px;}
+/*-----------GLOBAL-------------*/
+*{}
+#header #navigation ul li a{@include ease(.3s);}
+a{
+  @include ease(.3s);
+}
+body{color:#2da8c9;font-family:$font2;font-size:13px;}
 
 
 
@@ -36,8 +62,11 @@ input[type="text"]{
   border: none;
   height: 60px;
   padding: 0 20px;
+  font-size: 22px;
   @include round(10px);
 }
+
+input:focus{outline-style: none;}
 
 h1{font-size: 67px; font-family:$font2;font-weight: 700;}
 h2{font-size: 46px;font-weight: 500;}
@@ -65,24 +94,28 @@ h6{}
 
 
 #header{
-  background:#2da8c9;color:#fff;
-  #topBar{background:#525659;height: 56px;}
-  .wrap{padding: 70px 0;@include wrap(1300px)}
+  background:$bg1;color:$color3;
+  #topBar{background:$bg2;height: 56px;}
+  .wrap{padding: 70px 0;@include wrap(1300px);}
   #logo{
     width: 200px;
     a{
       img{
         max-width: 100%;
       }
+      &:hover{
+
+      }
     }
   }
   #navigation{
-    font-family:Gentium;font-size: 39px;    margin: 20px 0 0 7%;
+    font-family: $font3;font-size: 39px;    margin: 20px 0 0 7%;
     ul{
       li{
         display:inline-block;
         a{
           color:#fff; margin: 0 11px 0 3px;
+          &:hover{color:$color2;}
         }
       }
     }
@@ -142,7 +175,8 @@ h6{}
             font-size: 45px;
             @include round(2000px);
             &:hover{
-
+              background: $color1;
+              color: #fff;
             }
           }
         }
@@ -190,6 +224,7 @@ h6{}
         font-size: 38px;
         padding: 15px 20px;
         min-width: 260px;
+        cursor:pointer;
         @include round(10px);
       }
     }
@@ -202,7 +237,7 @@ h6{}
 
 
 #footer{
-  background:#bfbfbf;color:#fff;text-align:center;    font-size: 26px;    padding: 40px 0 30px 0;
+  background:#bfbfbf;color:$color3;text-align:center;    font-size: 26px;    padding: 40px 0 30px 0;
   .wrap2{
     @include wrap(960px);
     .ftCirc{
@@ -216,7 +251,11 @@ h6{}
       ul{
         li{
           display:inline-block;
-          a{color:#fff;margin: 0 11px 0 7px;}
+          a{
+            color:#fff;margin: 0 11px 0 7px;
+            &:hover{color:$color2;}
+          }
+
         }
       }
     }
@@ -224,13 +263,80 @@ h6{}
   }
 }
 
+/*#mobNav{display:none;}*/
+
 /*-------------------------------*/
 
 @media only screen and (max-width:1300px) {
   .wrap,#header .wrap{width:95%;margin:0 auto;}
+  #content .formWrap{width:100%;}
   #header #hRight{    width: 21%;}
-  
+  #header #navigation{margin: 20px 0 0 2%;}
+  #header #navigation ul li a{    font-size: 29px;}
+  #header #logo{    width: 160px;}
+  #content .formWrap .formButtons ul:after{width: 80%;}
+  #content .formWrap .formButtons ul li{    margin: 0 0 0 31%;}
+
 }
+
+@media only screen and (max-width:979px) {
+  #header{position:relative;}
+  #header #navigation{    float: right;    margin: 50px 0 0 2%;}
+  #header #hRight{    width: 21%;  position: absolute;  right: 20px; top: 50px;}
+  #header .wrap{    padding: 20px 0;}
+  #footer .wrap2{width:100%;}
+  #footer .wrap2 nav ul li{margin: 0 0 8px 0;}
+  #footer .wrap2 .ftCirc .circle{@include roundSize(50px);margin: 0 2%;}
+  #content .formWrap .formButtons ul:after{width:68%;}
+  #content .formWrap .formButtons ul li{    margin: 0 0 0 20%;}
+
+}
+
+@media only screen and (max-width:767px) {
+  #header #logo{text-align:center;    width: 210px; display: block; clear: both; float: none;  margin: 0 auto;}
+  #header #hRight{    width: 21%;  position: absolute; right: 20px;  top: 7px;  margin: 0;}
+  #header #navigation{    margin: 20px 0 0 0;text-align:center;width:100%;}
+  #header #hRight{width:200px;}
+  #header #navigation ul li a{font-size: 25px;margin: 0 6px 0 0;}
+  #content .formWrap .formDiv .formIn .formInputDiv .inputDivHalf{width: 100%;}
+  #content .formWrap .formDiv .formIn .formInputDiv{padding: 15px 0px 0 0px;}
+  #content .formWrap .formDiv .formIn .formInputDiv .inputDiv input[type="text"]{height:40px;}
+  .formTitle{text-align:center;}
+  #content .formWrap .formDiv .formSubmit{    margin: 30px auto 0 auto;}
+  #content .formWrap .formButtons ul li{margin: 0 0 0 15%;}
+}
+
+@media only screen and (max-width:480px) {
+  #header .wrap{padding: 20px 0 5px 0;}
+  #header #hRight{width: 200px;left:0;right:0;margin:0 auto;}
+  #navigation span{display:none;}
+  #header #navigation ul li{display:block;margin:0;}
+  #header #navigation ul li a{    display: block; margin: 0; border-top: solid 1px #fff; padding: 8px 0;}
+  #header #navigation ul li a:hover{background: #288da9;color:#fff;}
+  #content .formWrap .formButtons ul li a{border: solid #bfbfbf 6px;padding: 6px 11px;    font-size: 24px;}
+  #content .formWrap .formButtons ul:after{top: 20px;width: 63%; height: 7px;}
+  #content .formWrap .formDiv .formIn{    padding: 20px 25px 45px 25px;}
+  #content .formWrap .formDiv .formIn .formInputDiv .inputDiv label{font-size: 6vw;}
+  .formTitle{font-size: 8vw;}
+  #footer .wrap2 .ftCirc .circle{@include roundSize(40px);margin:0px;}
+  #ftNav{}
+  #footer .wrap2 nav ul{padding: 0 0 10px 0;}
+  #footer .wrap2 nav ul li{display:block;}
+  #footer .wrap2 nav ul li a{font-size: 19px;}
+  #ftNav span{display:none;}
+  h1{font-size: 14vw;margin:0 0 20px 0;}
+  p{    font-size: 8vw;}
+  #copyRight p{    font-size: 16px; line-height: 20px;}
+
+
+          /*#mobNav{    background: #525659; font-size: 25px; padding: 8px 0;position:relative;}
+          .mobIcon{left:10px;    top: 0px;position:absolute;}
+          .mobIcon div{content:'';display:block;position:absolute;top:9px;width:30px;height:4px;background:#fff;}
+          .mobIcon:before{content:'';display:block;position:absolute;top:19px;width:30px;height:4px;background:#fff;}
+          .mobIcon:after{content:'';display:block;position:absolute;top:29px;width:30px;height:4px;background:#fff;}*/
+}
+
+
 
 
 
