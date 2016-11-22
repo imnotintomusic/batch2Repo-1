@@ -15,10 +15,6 @@ $color2:#525659;
 $color3:#fff;
 $color4:#6b6b6b;
 
-$bg1:#2da8c9;
-$bg2:#525659;
-
-
 @mixin round($radius){
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
@@ -46,16 +42,9 @@ $bg2:#525659;
 
 /*-----------GLOBAL-------------*/
 *{}
-#header #navigation ul li a{@include ease(.3s);}
-a{
-  @include ease(.3s);
-}
-body{color:#2da8c9;font-family:$font2;font-size:13px;}
-
-
-
-a{ color:#555; text-decoration: none;}
-a:hover{color: #f05c58;}
+body{color:$color1;font-family:$font2;font-size:13px;}
+a{ color:#555; text-decoration: none;@include ease(.3s);}
+a:hover{color: $color2;}
 input[type="text"]{
   width: 100%;
   box-sizing: border-box;
@@ -68,19 +57,16 @@ input[type="text"]{
 
 input:focus{outline-style: none;}
 
-h1{font-size: 67px; font-family:$font2;font-weight: 700;}
+h1,h2,h3,h4,h5,h6{font-family:$font2;}
+h1{font-size: 67px; font-weight: 700;}
 h2{font-size: 46px;font-weight: 500;}
 h3{font-size: 36px;font-weight: 500;}
 h4{}
 h5{}
 h6{}
 
-/**{transition:ease all .3s;-webkit-transition:ease all .3s;-moz-transition:ease all .3s;-o-transition:ease all .3s;-ms-transition:ease all .3s}*/
-
 
 /*-----------CUSTOM-------------*/
-
-
 
 .clr:after{content:'';display:block;height:0;clear:both;visibility:hidden;}
 .clr2{content:'';display:block;height:0;clear:both;visibility:hidden;}
@@ -88,14 +74,14 @@ h6{}
 .right{float:right;}
 
 
-/**------**/
+/*-----------HEADER------------*/
 
 
 
 
 #header{
-  background:$bg1;color:$color3;
-  #topBar{background:$bg2;height: 56px;}
+  background:$color1;color:$color3;
+  #topBar{background:$color2;height: 56px;}
   .wrap{padding: 70px 0;@include wrap(1300px);}
   #logo{
     width: 200px;
@@ -116,15 +102,17 @@ h6{}
         a{
           color:#fff; margin: 0 11px 0 3px;
           &:hover{color:$color2;}
+          @include ease(.3s);
         }
       }
     }
 
   }
   #hRight{
-    width: 270px; margin: 25px 0 0 0;
+    width: 270px; margin: 25px 0 0 0;text-align:right;
     input[type="text"]{
       border: solid 1px #fff;
+      width:70%;
       height: 40px;
       background: url(../images/NXTLVL_WEBDEV_ICON_MAGNIFYING.png) no-repeat 98% center;
       background-size: 24px;
@@ -132,14 +120,19 @@ h6{}
       box-sizing: border-box;
       color: #fff;
       font-size: 18px;
+      @include ease(.3s);
       @include round(10px);
+      &:focus{
+        width:100%;
+
+      }
     }
   }
 }
 
 
 
-
+/*-----------CONTENT------------*/
 
 
 
@@ -226,13 +219,18 @@ h6{}
         min-width: 260px;
         cursor:pointer;
         @include round(10px);
+        @include ease(.3s);
+        &:hover{
+          background:$color2;
+
+        }
       }
     }
   }
 }
 
 
-/**------**/
+/*-----------FOOTER-------------*/
 
 
 
@@ -265,8 +263,15 @@ h6{}
 
 /*#mobNav{display:none;}*/
 
-/*-------------------------------*/
 
+
+
+
+
+
+
+/*-------------------------------*/
+/*
 @media only screen and (max-width:1300px) {
   .wrap,#header .wrap{width:95%;margin:0 auto;}
   #content .formWrap{width:100%;}
@@ -317,6 +322,7 @@ h6{}
   #content .formWrap .formButtons ul:after{top: 20px;width: 63%; height: 7px;}
   #content .formWrap .formDiv .formIn{    padding: 20px 25px 45px 25px;}
   #content .formWrap .formDiv .formIn .formInputDiv .inputDiv label{font-size: 6vw;}
+  #content .formWrap .formDiv .formSubmit{min-width:0;}
   .formTitle{font-size: 8vw;}
   #footer .wrap2 .ftCirc .circle{@include roundSize(40px);margin:0px;}
   #ftNav{}
@@ -329,14 +335,14 @@ h6{}
   #copyRight p{    font-size: 16px; line-height: 20px;}
 
 
-          /*#mobNav{    background: #525659; font-size: 25px; padding: 8px 0;position:relative;}
+          #mobNav{    background: #525659; font-size: 25px; padding: 8px 0;position:relative;}
           .mobIcon{left:10px;    top: 0px;position:absolute;}
           .mobIcon div{content:'';display:block;position:absolute;top:9px;width:30px;height:4px;background:#fff;}
           .mobIcon:before{content:'';display:block;position:absolute;top:19px;width:30px;height:4px;background:#fff;}
-          .mobIcon:after{content:'';display:block;position:absolute;top:29px;width:30px;height:4px;background:#fff;}*/
+          .mobIcon:after{content:'';display:block;position:absolute;top:29px;width:30px;height:4px;background:#fff;}
 }
-
-
+*/
+ 
 
 
 
